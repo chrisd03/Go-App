@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	x := plusTwo()
-	fmt.Printf("%d\n", x(2))
+	y := plusX(5)
+	fmt.Printf("%d\n", y(2))
 }
 
-func plusTwo() func(int) int {
+func plusX(y int) func(int) int {
 	return func(x int) int {
-		return x + 2
+		return y + x
 	}
 }
